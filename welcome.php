@@ -9,12 +9,14 @@
     <?php
     $name = "Richard";
     $food = "Jollof Rice";
+    $quantity= 2;
     $age = "23";
     $price = 4.99;
 
-    echo"My name is {$name} and i like {$food},<br> I am {$age} years old <br>";
-    var_dump($num);
-    echo "<br>Your {$food} is ";
+    echo "You have ordered {$quantity} {$food} <br>";
+    $total = $quantity * $price;
+    echo "Your total is {$total}";
+
    ?>
     
 </body> 
