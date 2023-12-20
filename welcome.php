@@ -6,21 +6,22 @@
     <title>php body</title>
 </head>
 <body>
-    <?php
-    $name = "Richard";
-    $food = "Jollof Rice";
-    $quantity= 2;
-    $age = "23";
-    $price = 4.99;
-    $z;
-    $z = 1 + 2;
-    echo "You have ordered {$quantity} {$food} <br>";
-    $total = $quantity * $price;
-    echo "Your total is {$z}";
-
-  
-
-   ?>
-    
+    <form action="/welcome.php" method="get">
+    <Label>Username:
+    <input type="text" name="name" id="">
+    </Label>
+    <Label>Password
+        <input type="password" name="password" id="">
+    </Label>
+    <input type="submit" value="log in">
+    </form>
+   
 </body> 
 </html>
+
+<?php 
+$name = $_GET["name"];
+echo "username = {$name}";
+$password = $_GET["password"];
+echo "<br>Password = $password";
+?>
