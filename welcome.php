@@ -6,22 +6,22 @@
     <title>php body</title>
 </head>
 <body>
-    <form action="/welcome.php" method="get">
-    <Label>Username:
-    <input type="text" name="name" id="">
-    </Label>
-    <Label>Password
-        <input type="password" name="password" id="">
-    </Label>
-    <input type="submit" value="log in">
-    </form>
-   
+  
+<form action="/welcome.php" method="post">
+    <label for="quantity">
+        Quantity:
+        <input type="number" name="quantity" id="quantity">
+    </label>
+    <input type="submit" value="Total   ">
+</form>
 </body> 
 </html>
 
 <?php 
-$name = $_GET["name"];
-echo "username = {$name}";
-$password = $_GET["password"];
-echo "<br>Password = $password";
+$quantity = $_POST["quantity"];
+$price = 5.99;
+$goodsType = "Belts";
+$TOTAL = $quantity * $price;
+
+echo "{$quantity} {$goodsType} costs {$TOTAL}";
 ?>
