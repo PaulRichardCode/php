@@ -12,10 +12,13 @@
     $quantity= 2;
     $age = "23";
     $price = 4.99;
-
+    $z;
+    $z = 1 + 2;
     echo "You have ordered {$quantity} {$food} <br>";
     $total = $quantity * $price;
-    echo "Your total is {$total}";
+    echo "Your total is {$z}";
+
+  
 
    ?>
     
