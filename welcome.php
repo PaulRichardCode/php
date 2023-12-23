@@ -23,5 +23,5 @@ $price = 5.99;
 $goodsType = "Belts";
 $TOTAL = $quantity * $price;
 
-echo "{$quantity} {$goodsType} costs {$TOTAL}";
+echo "{$quantity} {$goodsType} costs \${$TOTAL}";
 ?>
