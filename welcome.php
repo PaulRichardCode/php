@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,26 +6,35 @@
     <title>php body</title>
 </head>
 <body>
-    <form action="/welcome.php" method="post">
-       <label for="radius">Radius:</label>
-       <input type="number" name="number" id="number">
-       <input type="submit" value="calculate">
-    </form>
+   <form action="/welcome.php" method="get">
+    <label for="numbs">
+        Enter a number to count down from:
+        <input type="number" name="number" id="number">
+        <input type="submit" value="start">
+    </label>
+   </form>
             
 </body> 
 </html>
 
 <?php
-   $radius = $_POST["number"];
-    $circumference = null;
-    $volume = null;
+// $fruits = array("Rice", "Banana", "orange","pawpaw");
+// array_push($fruits,"APPLE");
 
-   $pi = pi();
-   $circumference = $radius * 2 * pi();
-   $circumference = round($circumference,2);
-   $volume = $radius * pi() * 4/3;
-   $volume = round($volume, 2);
+// foreach ($fruits as $fruit) {
+//     echo "<br>". $fruit ."";
+// }
 
-   echo "circumference = {$circumference}cm <br>";
-   echo "volume = {$volume}"
-?>
+//associative array
+$cars = array(
+    "Toyota" => "Camry",
+    "Benz" => "4matic", 
+    "Honda" => "C-Class", 
+    "Audi" => "motosport",
+    "Toyota2" => "Corrola"
+);
+
+echo $cars("Toyota");
+
+
+?> 
