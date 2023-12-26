@@ -6,18 +6,22 @@
     <title>php body</title>
 </head>
 <body>
-   <form action="/welcome.php" method="get">
-    <label for="numbs">
-        Enter a number to count down from:
-        <input type="number" name="number" id="number">
-        <input type="submit" value="start">
-    </label>
-   </form>
+ <!-- #region -->
+ <form action="welcome.php" method="post">
+    <input type="radio" name="debit_card1" id="Card" value="Visa"> Visa <br>
+    <input type="radio" name="debit_card" id="Card" value="MasterCard"> MasterCard <br>
+    <input type="radio" name="debit_card" id="Card" value="Verve"> Verve <br>
+    <input type="submit" value="Confirm">
+ </form>
             
 </body> 
 </html>
 
 <?php
+//isset 
+//empty
+
+
 // $fruits = array("Rice", "Banana", "orange","pawpaw");
 // array_push($fruits,"APPLE");
 
@@ -25,16 +29,20 @@
 //     echo "<br>". $fruit ."";
 // }
 
-//associative array
-$cars = array(
-    "Toyota" => "Camry",
-    "Benz" => "4matic", 
-    "Honda" => "C-Class", 
-    "Audi" => "motosport",
-    "Toyota2" => "Corrola"
-);
+//associative array projects
+// $countrys = array(
+//     "Nigeria"=> "Lagos",
+//     "USA"=> "Washington DC",
+//     "united kingdom"=> "London",
+//     "Canada"=> "Ottawa",
+// );
 
-echo $cars("Toyota");
+// $textValue = $_GET["text"];
 
+// foreach ($countrys as $key => $value) {
+//     if($textValue == $key) {
+//         echo "$value";
+//     } 
+// }
 
 ?> 
