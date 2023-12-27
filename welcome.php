@@ -8,10 +8,10 @@
 <body>
  <!-- #region -->
  <form action="welcome.php" method="post">
-    <input type="radio" name="debit_card1" id="Card" value="Visa"> Visa <br>
+    <input type="radio" name="debit_card" id="Card" value="Visa"> Visa <br>
     <input type="radio" name="debit_card" id="Card" value="MasterCard"> MasterCard <br>
     <input type="radio" name="debit_card" id="Card" value="Verve"> Verve <br>
-    <input type="submit" value="Confirm">
+    <input type="submit" name="submit" value="Confirm">
  </form>
             
 </body> 
@@ -19,7 +19,18 @@
 
 <?php
 //isset 
-//empty
+//emptynn
+$btn = $_POST["submit"];
+
+if(isset($btn)) {
+    if(isset($_POST["debit_card"])) {
+        $debitCard = $_POST["debit_card"];
+        echo $debitCard;
+    } else {
+        echo "Please make a selection dont be foolish";
+    }
+}
+
 
 
 // $fruits = array("Rice", "Banana", "orange","pawpaw");
