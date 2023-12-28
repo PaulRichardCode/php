@@ -7,29 +7,52 @@
 </head>
 <body>
  <!-- #region -->
- <form action="welcome.php" method="post">
-    <input type="radio" name="debit_card" id="Card" value="Visa"> Visa <br>
-    <input type="radio" name="debit_card" id="Card" value="MasterCard"> MasterCard <br>
-    <input type="radio" name="debit_card" id="Card" value="Verve"> Verve <br>
-    <input type="submit" name="submit" value="Confirm">
- </form>
+<form action="welcome.php" method="get">
+    <input type="radio" name="visa" id="visa"> Visa <br>
+    <input type="radio" name="visa" id="mastercard"> Mastercard <br>
+    <input type="radio" name="visa" id="verve"> Verve <br>
+    <input type="submit" name="submit">
+</form>
             
 </body> 
 </html>
 
 <?php
-//isset 
-//emptynn
-$btn = $_POST["submit"];
+$debitcard = $_GET["visa"];
 
-if(isset($btn)) {
-    if(isset($_POST["debit_card"])) {
-        $debitCard = $_POST["debit_card"];
-        echo $debitCard;
+if (isset($_GET["submit"])) {
+   
+    if(isset($debitcard)) {
+       echo "You have selected {$debitcard}";
     } else {
-        echo "Please make a selection dont be foolish";
+        echo "Please select a card";
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//isset
+//emptynn
+// $btn = $_POST["submit"];
+
+// if(isset($btn)) {
+//     if(isset($_POST["debit_card"])) {
+//         $debitCard = $_POST["debit_card"];
+//         echo $debitCard;
+//     } else {
+//         echo "Please make a selection dont be foolish";
+//     }
+// }
 
 
 
@@ -50,7 +73,7 @@ if(isset($btn)) {
 
 // $textValue = $_GET["text"];
 
-// foreach ($countrys as $key => $value) {
+// foreach ($countrys as $key => q$value) {
 //     if($textValue == $key) {
 //         echo "$value";
 //     } 
