@@ -7,12 +7,21 @@
 </head>
 <body>
     <form action="welcome.php" method="post">
-        <input type="checkbox" name="foods[]" id="pizza" value="PIZZA"> pizza: <br>
-        <input type="checkbox" name="foods[]" id="Hamburger" value="HAMBURGER"> Hamburger: <br>
-        <input type="checkbox" name="foods[]" id="Hotdog" value="HOTDOG"> Hotdog: <br>
-        <input type="checkbox" name="foods[]" id="Taco" value="TACO"> Taco: <br>
-        <input type="submit" value="submit" name="submit">
+        username: <br>
+        <input type="text" name="username" id="username"> <br>
+        <input type="text" name="number" id="number"> <br>
+        <input type="submit" value="log in" name="submit">
     </form>
 </body>
 </html>             
 
+<?php
+//sanitize yyour input
+//DONT DELETE
+ if(isset($_POST["submit"])){
+    $username = filter_input(INPUT_POST,"username", FILTER_SANITIZE_SPECIAL_CHARS);
+    $password = filter_input(INPUT_POST,"number", FILTER_SANITIZE_NUMBER_INT);
+
+    echo $username . " is " . $password . " years";
+ }
+?>
