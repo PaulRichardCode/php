@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +12,41 @@
 <body>
     <form action="welcome.php" method="post">
         username: <br>
-        <input type="text" name="username" id="username"> <br>
-        <input type="text" name="number" id="number"> <br>
+        <input type="text" name="username" id="username"> <br><br>
+        password:<br>
+        <input type="password" name="number" id="number"> <br><br>
         <input type="submit" value="log in" name="submit">
     </form>
 </body>
 </html>             
 
 <?php
+   if(isset($_POST["submit"])){
+
+    if(empty($_POST["username"]) && empty($_POST["number"])){
+
+     $_SESSION["username"] = $_POST["username"];
+     $_SESSION["password"] = $_POST["number"];
+
+     echo $_SESSION["username"];
+     echo $_SESSION["password"];
+    } else{
+        echo "enter you stuffs";
+    }
+   }
+
 //sanitize yyour input
 //DONT DELETE
- if(isset($_POST["submit"])){
-    $username = filter_input(INPUT_POST,"username", FILTER_SANITIZE_SPECIAL_CHARS);
-    $password = filter_input(INPUT_POST,"number", FILTER_SANITIZE_NUMBER_INT);
+//  if(isset($_POST["submit"])){
+//     $username = filter_input(INPUT_POST,"username", FILTER_SANITIZE_SPECIAL_CHARS);
+//     //validate email
+//     $age = filter_input(INPUT_POST, "number", FILTER_VALIDATE_INT);
+//     if(empty($age)) {
+//         echo"your number isn't valid!";
+//     } else {
+//         echo "your are {$age} years old";
+//     }
 
-    echo $username . " is " . $password . " years";
- }
+    
+//  }
 ?>
