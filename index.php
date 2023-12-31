@@ -11,8 +11,8 @@
 </head>
 <body>
     <form action="{<?php htmlspecialchars( $_SERVER["PHP_SELF"])?>}" method="post">
-        username: <br>
-        <input type="text" name="username" id="username"> <br><br>
+        input password?: <br>
+        <input type="text" name="password" id="password"> <br><br>
         <input type="submit" value="log in" name="submit">
     </form>
 </body>
@@ -20,9 +20,7 @@
 
 <?php
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "hello";
-}
+
 
 
 //    if(isset($_POST["submit"])){
