@@ -10,30 +10,33 @@
     <title>php learn</title>
 </head>
 <body>
-    <form action="welcome.php" method="post">
+    <form action="{<?php htmlspecialchars( $_SERVER["PHP_SELF"])?>}" method="post">
         username: <br>
         <input type="text" name="username" id="username"> <br><br>
-        password:<br>
-        <input type="password" name="number" id="number"> <br><br>
         <input type="submit" value="log in" name="submit">
     </form>
 </body>
 </html>             
 
 <?php
-   if(isset($_POST["submit"])){
 
-    if(empty($_POST["username"]) && empty($_POST["number"])){
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "hello";
+}
 
-     $_SESSION["username"] = $_POST["username"];
-     $_SESSION["password"] = $_POST["number"];
 
-     echo $_SESSION["username"];
-     echo $_SESSION["password"];
-    } else{
-        echo "enter you stuffs";
-    }
-   }
+//    if(isset($_POST["submit"])){
+
+//     if(!empty($_POST["username"]) && !empty($_POST["number"])){
+
+//      $_SESSION["username"] = $_POST["username"];
+//      $_SESSION["password"] = $_POST["number"];
+
+//      header("Location: home.php");
+//     } else{
+//         echo "Missing username and password";
+//     }
+//    }
 
 //sanitize yyour input
 //DONT DELETE
