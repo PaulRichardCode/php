@@ -11,7 +11,7 @@
 </head>
 <body>
     <form action="{<?php htmlspecialchars( $_SERVER["PHP_SELF"])?>}" method="post">
-        input password?: <br>
+        input password: <br>
         <input type="text" name="password" id="password"> <br><br>
         <input type="submit" value="log in" name="submit">
     </form>
