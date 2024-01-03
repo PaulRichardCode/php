@@ -16,9 +16,6 @@
         echo "you are wasting time";
     }
 
-    if($conn) {
-        echo "It don connect";
-    } 
 
 
 

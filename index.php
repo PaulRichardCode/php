@@ -1,10 +1,22 @@
 <?php 
         include("database.php");
 
-        $sql = "INSERT INTO users(user, password)
-                VALUES('Richard', '123Rich')";
+        // $username = "Patrick";
+        // $password = "rock3";
 
-        mysqli_query($conn, $sql);
+        // $hash = password_hash($password, PASSWORD_DEFAULT);
+        // $sql = "INSERT INTO users(user, password)
+        //         VALUES('$username', '$hash')";
+
+        $sql = "SELECT * FROM users WHERE user = 'spongebob'";
+
+        try {
+            mysqli_query($conn, $sql);
+            echo "user is now registered";
+        } catch (mysqli_sql_exception) {
+            echo "Could not register user";
+        }
+       
 
         mysqli_close($conn);
 ?>
