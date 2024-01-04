@@ -22,7 +22,11 @@
         $password = "godloveme123";
 
         $hash = password_hash($password, PASSWORD_DEFAULT);
-        echo "$username" . "$hash";
+        
+        $sql = "INSERT INTO users(user, password)
+                VALUE('$username', '$hash')";
+        
+        mysqli_query($conn, $sql);
 
         mysqli_close($conn);
 ?>
