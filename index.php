@@ -18,13 +18,13 @@
         // }
        
         
-      $sql = "SELECT * FROM users WHERE user = 'spongebob'";
-      $result = mysqli_query($conn, $sql);
+    //   
+    //   $result = mysqli_query($conn, $sql);
 
-    if(mysqli_num_rows($result) > 0) {
-        $rows =mysqli_fetch_assoc($result);
-        echo $rows["id"] . '<br>' ;
-    }
+    // if(mysqli_num_rows($result) > 0) {
+    //     $rows =mysqli_fetch_assoc($result);
+    //     echo $rows["id"] . '<br>' ;
+    // }
 
         mysqli_close($conn);
 ?>
