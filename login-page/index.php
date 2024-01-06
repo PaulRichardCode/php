@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Log in</h1>
+        <h1>Login</h1>
         <form action="index.php" method="post" class="form">
             <label for="username">UserName:</label>
             <input type="text" name="username" placeholder="username" id="username">
