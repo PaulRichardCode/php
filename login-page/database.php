@@ -5,8 +5,12 @@
     $db_name = "logindb";
     $conn = "";
 
-    $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
-    echo"you are connected";
+    try {
+        $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+        
+    } catch (mysqli_sql_exception) {
+        echo "you are not connected! Try again";
+    }
 
 
 ?>
