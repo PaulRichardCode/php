@@ -16,8 +16,13 @@
             <input type="password" name="password" placeholder="****************" id="password">
             <input type="submit" value="Login" class="btn">
         </form>
-
+        
     </div>
 
 </body>
 </html>
+<?php 
+    include("../login-page/database.php");
+
+    
+?>
