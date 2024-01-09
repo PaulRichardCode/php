@@ -19,14 +19,14 @@ body {
   text-align: center;
 }
 
-form {
+.form1 {
   line-height: 4rem;
   max-width: 35rem;
   padding: 2rem;
   margin: 0 auto;
 }
 
-form input {
+.form1 input {
   width: 90%;
   outline: none;
   font-size: 1rem;
@@ -35,10 +35,10 @@ form input {
   padding: 0 1rem;
 }
 
-.submitBtn {
+.form1 .submitBtn {
   background-color: green;
   color: white;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   cursor: pointer;
   border-radius: 5px;
 }
