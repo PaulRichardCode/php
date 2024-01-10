@@ -1,4 +1,6 @@
-<?php 
+<?php
+    include("database.php");
+
      if(isset($_POST["submit"])){
         $product = $_POST["product"];
         $price = $_POST["price"];
