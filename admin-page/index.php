@@ -29,8 +29,8 @@
        
     </div>
 
-    <div class="products">
-    <ul class="product">
+    <div class="container2">
+    <ul class="product-data">
           <li>Product Image</li>
           <li>Product Name</li>
           <li>Product Price</li>

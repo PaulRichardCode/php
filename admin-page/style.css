@@ -41,6 +41,7 @@ body {
   padding: 0.5rem;
   cursor: pointer;
   border-radius: 5px;
+  transition: 300ms;
 }
 
 .form1 .submitBtn:hover {
@@ -54,4 +55,20 @@ body {
   padding: 1rem 2rem 2rem;
   font-size: 1rem;
   display: block;
+}
+
+.container2 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.product-data {
+  display: flex;
+  justify-content: space-around;
+}
+
+.product-data li {
+  list-style: none;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
