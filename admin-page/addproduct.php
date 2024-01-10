@@ -7,9 +7,8 @@
 
         if(empty($product) || empty($price) || empty($file)){
             $messages[] = "Please Fill Out All!";
-            
         } else {
-            $messages[] = "Product added succesfully";
+            $messages[] = "Forms has been submitted!";
         }
     }
 ?>

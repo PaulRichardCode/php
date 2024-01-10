@@ -11,11 +11,14 @@
 </head>
 <body>
     <?php 
+    if(isset($messages)) {
      foreach($messages as $message) {
-        echo "<span> {$message}</span>";
-     }
+        echo "<span class='message'> {$message}</span>";
+     } 
+    }
     ?>
  <div class="container">
+
  <h1>ADD A NEW PRODUCT</h1>
        <form action="./index.php" method="post" class="form1">
         <input type="text" name="product" placeholder="enter the product name" id="name">
